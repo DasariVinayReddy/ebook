@@ -13,7 +13,7 @@ export const Hero = () => {
               computer science ebooks. Find ratings and access to the newest
               books digitally.
             </p>
-            <div className="justify-center md:justify-start">
+            <div className="text-center justify-center md:justify-start">
               <a
                 href="/products"
                 type="button"
