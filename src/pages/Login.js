@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import { login } from "./services/authServices";
 import "react-toastify/dist/ReactToastify.css";
+
 export const Login = () => {
   const navigate = useNavigate();
   const email = useRef();
@@ -12,8 +13,8 @@ export const Login = () => {
     event.preventDefault();
     try {
       const authDetail = {
-        email: email.current.value,
-        password: password.current.value,
+        email: email.current.value, // email
+        password: password.current.value, //password
       };
       const data = await login(authDetail);
       data.accessToken ? navigate("/products") : toast.error(data);
